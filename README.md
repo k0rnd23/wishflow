@@ -1,20 +1,36 @@
 # WishFlow
 
-A modern wishlist app that doesn't suck. Built with Next.js 13 App Router and some other cool tech I wanted to try out.
+A modern wishlist management platform built with Next.js 13 App Router and advanced technologies.
 
-## What's This?
+## Project Overview
 
-Got tired of using generic todo lists for gift planning, so built this instead. It's a wishlist app where you can:
+<div align="center">
+  <img src="/public/screenshots/dashboard.png" alt="WishFlow Dashboard" width="800"/>
+  <p align="center">WishFlow Dashboard: Centralized wishlist management</p>
+</div>
 
-- Create wishlists and share them (or keep private)
-- Track prices in different currencies (uses exchange rate API)
-- Add notes and images to items
-- Organize stuff with categories
-- View other people's public wishlists
+WishFlow is a comprehensive wishlist application designed to streamline gift planning and personal item tracking. The platform offers robust features for creating, managing, and sharing wishlists while maintaining a sleek, cyberpunk-inspired interface.
 
-Built this mainly to try out Next.js 13 App Router and play with some new tech. Also wanted a proper wishlist app for myself.
+## Core Features
 
-## Tech Stack
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0;">
+  <div>
+    <img src="/public/screenshots/wishlists.png" alt="Wishlist Management" width="400"/>
+    <p align="center">Organized Wishlist Management</p>
+  </div>
+  <div>
+    <img src="/public/screenshots/items.png" alt="Item Details" width="400"/>
+    <p align="center">Detailed Item Tracking</p>
+  </div>
+</div>
+
+- Advanced wishlist creation with privacy controls
+- Real-time currency conversion across multiple currencies
+- Comprehensive media attachment system
+- Intuitive category organization
+- Public wishlist discovery
+
+## Technology Stack
 
 [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -23,10 +39,11 @@ Built this mainly to try out Next.js 13 App Router and play with some new tech. 
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
-## Key Features
+## Interface Overview
 
 <div align="center">
-  <img src="/public/screenshots/dashboard.png" alt="Feature Overview" width="800"/>
+  <img src="/public/screenshots/mainmenu.png" alt="Main Interface" width="800"/>
+  <p align="center">Intuitive Main Interface with Cyberpunk Aesthetics</p>
 </div>
 
 - Secure Authentication (NextAuth.js)
