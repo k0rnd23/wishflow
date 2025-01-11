@@ -59,7 +59,7 @@ You need Node.js 18+ and pnpm installed.
 
 ```bash
 # Clone it
-git clone https://github.com/yourusername/wishflow.git
+git clone https://github.com/k0rnd23/wishflow.git
 cd wishflow
 
 # Install deps
