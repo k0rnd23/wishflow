@@ -16,12 +16,25 @@ Built this mainly to try out Next.js 13 App Router and play with some new tech. 
 
 ## Tech Stack
 
-- Next.js 13 (App Router)
-- TypeScript
-- Prisma + PostgreSQL
-- TailwindCSS 
-- NextAuth
-- Some cool UI libs like Radix UI, Framer Motion
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+
+## Key Features
+
+<div align="center">
+  <img src="/public/screenshots/dashboard.png" alt="Feature Overview" width="800"/>
+</div>
+
+- Secure Authentication (NextAuth.js)
+- Real-time Currency Conversion
+- Rich Media Support
+- Category Management
+- Social Discovery
+- Mobile Responsive Design
 
 ## Running Locally
 
