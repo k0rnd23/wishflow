@@ -1,0 +1,80 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  password      String
+  image         String?
+  wishlists     Wishlist[]
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  preferredCurrency String @default("USD")
+}
+
+model Wishlist {
+  id          String    @id @default(cuid())
+  title       String
+  description String?
+  userId      String
+  user        User      @relation(fields: [userId], references: [id])
+  items       WishItem[]
+  category    Category  @relation(fields: [categoryId], references: [id])
+  categoryId  String
+  viewCount   Int       @default(0)
+  isPrivate   Boolean   @default(false)  // New field
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model WishItem {
+  id          String    @id @default(cuid())
+  title       String
+  description String?
+  price       Float?
+  currency    String    @default("KZT")
+  image       String?
+  url         String?
+  completed   Boolean   @default(false)
+  notes       Note[]
+  wishlistId  String
+  wishlist    Wishlist  @relation(fields: [wishlistId], references: [id])
+  viewCount   Int       @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Note {
+  id          String    @id @default(cuid())
+  content     String
+  wishItemId  String
+  wishItem    WishItem  @relation(fields: [wishItemId], references: [id], onDelete: Cascade)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Category {
+  id          String    @id @default(cuid())
+  name        String
+  wishlists   Wishlist[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+// Activity tracking
+model Activity {
+  id          String    @id @default(cuid())
+  type        String    // e.g., "create_wishlist", "update_item", etc.
+  userId      String
+  wishlistId  String?
+  itemId      String?
+  data        Json?     // Additional activity data
+  createdAt   DateTime  @default(now())
+}
